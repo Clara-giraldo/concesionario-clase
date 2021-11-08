@@ -3,9 +3,7 @@ import React from 'react'
 export const index = () => {
     return (
         <div>
-            contenido landing concesionario
+            pagina principal admin
         </div>
     )
 }
-
-export default index;

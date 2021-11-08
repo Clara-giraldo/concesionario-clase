@@ -7,25 +7,48 @@ import 'styles/styles.css'
 import { PublicLayout } from 'layouts/PublicLayout';
 import { PrivateLayout } from 'layouts/PrivateLayout';
 import { AuthLayout } from 'layouts/AuthLayout';
+import { vehiculos } from 'pages/admin/vehiculos';
+import { Clientes } from 'pages/admin/Clientes';
 
 function App() {
   return (
     <Router>
       <Switch>
-        <Route path='/login'>
-        <Login/>
+        <Route path={['/admin', '/admin/vehiculos', '/admin/clientes']}>
+          <PublicLayout>
+            <switch>
+              <Route path='/admin/vehiculos'>
+                <vehiculos />
+              </Route>
+              <Route path='/admin/clientes'>
+                <Clientes />
+              </Route>
+              <Route path='/admin'>
+                <Admin />
+              </Route>
+            </switch>
+          </PublicLayout>
         </Route>
-        <Route path='/registro'>
-        <Registro/>
+        <Route path={['/login','/registro']}>
+          <AuthLayout>
+            <switch>
+            <Route path='/login'>
+                <Login />
+            </Route>
+            <Route path='/registro'>
+                <Registro />
+            </Route>
+            </switch>
+          </AuthLayout>
         </Route>
-        <Route path='/admin'>
-        <AuthLayout>
-        <Admin/>
-        </AuthLayout>
-        </Route>
-        <Route path='/'>
-        <PublicLayout/>
-        <index/>
+        <Route path={['/']}>
+          <PublicLayout>
+          <switch>
+              <Route path='/index'>
+                <index />
+              </Route>
+            </switch>
+          </PublicLayout>
         </Route>
       </Switch>
     </Router>

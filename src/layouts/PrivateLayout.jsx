@@ -1,5 +1,5 @@
 import { Sidebar } from 'components/Sidebar'
-import React, { Children } from 'react'
+import React from 'react'
 
 export const PrivateLayout = ({Children}) => {
     return (
