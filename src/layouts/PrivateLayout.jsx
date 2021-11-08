@@ -1,11 +1,15 @@
 import { Sidebar } from 'components/Sidebar'
 import React from 'react'
 
-export const PrivateLayout = ({Children}) => {
+const PrivateLayout = ({Children}) => {
     return (
-        <div>
+        <div className='flex w-screen h-screen bg-blue-300'>
             <Sidebar/>
+            <main className='flex w-full bg-blue-300'>
             {Children}
+            </main>
         </div>
     )
 }
+
+export default PrivateLayout;

@@ -2,8 +2,6 @@ import React from 'react'
 
 export const Sidebar = () => {
     return (
-        <div>
-           Sidebar 
-        </div>
+        <nav className='w-72 bg-green-400'>Sidebar</nav>
     )
 }

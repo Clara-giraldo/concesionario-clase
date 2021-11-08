@@ -2,7 +2,7 @@ import { Footer } from 'components/Footer'
 import { Navbar } from 'components/Navbar'
 import React from 'react'
 
-export const PublicLayout = ({children}) => {
+const PublicLayout = ({children}) => {
     return (
         <div className='flex flex-col justify-between h-screen'>
           <Navbar/>
@@ -12,3 +12,5 @@ export const PublicLayout = ({children}) => {
         </div>
     );
 }
+
+export default PublicLayout;

@@ -1,12 +1,12 @@
 import { index } from 'pages';
 import { Admin } from 'pages/Admin';
-import { Login } from 'pages/Login';
+import Login from 'pages/Login';
 import { Registro } from 'pages/Registro';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import 'styles/styles.css'
-import { PublicLayout } from 'layouts/PublicLayout';
-import { PrivateLayout } from 'layouts/PrivateLayout';
-import { AuthLayout } from 'layouts/AuthLayout';
+import PrivateLayout from 'layouts/PrivateLayout';
+import PublicLayout from 'layouts/PublicLayout';
+import AuthLayout from 'layouts/AuthLayout';
 import { vehiculos } from 'pages/admin/vehiculos';
 import { Clientes } from 'pages/admin/Clientes';
 
@@ -15,7 +15,7 @@ function App() {
     <Router>
       <Switch>
         <Route path={['/admin', '/admin/vehiculos', '/admin/clientes']}>
-          <PublicLayout>
+          <PrivateLayout>
             <switch>
               <Route path='/admin/vehiculos'>
                 <vehiculos />
@@ -27,7 +27,7 @@ function App() {
                 <Admin />
               </Route>
             </switch>
-          </PublicLayout>
+          </PrivateLayout>
         </Route>
         <Route path={['/login','/registro']}>
           <AuthLayout>

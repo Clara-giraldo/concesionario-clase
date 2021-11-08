@@ -1,10 +1,12 @@
 import React from 'react'
 
-export const AuthLayout = ({Children}) => {
+const AuthLayout = ({children}) => {
     return (
-        <div>
-            AuthLayout
-            {Children}
+        <div className='flex flex-col items-center justify-centar bg-gray-50'>
+            layout autenticacion
+            <div className='w-full'>{children}</div>
         </div>
-    )
-}
+    );
+};
+
+export default AuthLayout
