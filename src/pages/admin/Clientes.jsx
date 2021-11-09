@@ -1,9 +1,11 @@
 import React from 'react'
 
-export const Clientes = () => {
+const Clientes = () => {
     return (
         <div>
             pagina clientes admin
         </div>
     )
 }
+
+export default Clientes;

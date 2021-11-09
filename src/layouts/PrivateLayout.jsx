@@ -1,15 +1,18 @@
-import { Sidebar } from 'components/Sidebar'
+import Sidebar from 'components/Sidebar';
 import React from 'react'
 
-const PrivateLayout = ({Children}) => {
-    return (
-        <div className='flex w-screen h-screen bg-blue-300'>
-            <Sidebar/>
-            <main className='flex w-full bg-blue-300'>
-            {Children}
-            </main>
-        </div>
-    )
-}
+
+const PrivateLayout = ({ children }) => {
+  return (
+    <div className='flex w-screen h-screen'>
+      <div className='flex flex-nowrap h-full w-full'>
+        <Sidebar />
+        <main className='flex w-full  overflow-y-scroll items-center justify-center'>
+          {children}
+        </main>
+      </div>
+    </div>
+  );
+};
 
 export default PrivateLayout;

@@ -1,9 +1,11 @@
 import React from 'react'
 
-export const Registro = () => {
+const Registro = () => {
     return (
         <div>
             Pagina de registro
         </div>
     )
 }
+
+export default Registro;

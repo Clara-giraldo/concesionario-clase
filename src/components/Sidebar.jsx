@@ -1,7 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-export const Sidebar = () => {
-    return (
-        <nav className='w-72 bg-green-400'>Sidebar</nav>
-    )
-}
+const Sidebar = () => {
+  return (
+    <nav className='w-72 border border-gray-300 h-full flex flex-col justify-between'>Sidebar</nav>
+  );
+};
+
+export default Sidebar;

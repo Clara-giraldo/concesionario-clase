@@ -1,9 +1,11 @@
 import React from 'react'
 
-export const index = () => {
+const index = () => {
     return (
         <div>
             pagina principal admin
         </div>
     )
 }
+
+export default index;
