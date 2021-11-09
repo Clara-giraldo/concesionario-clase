@@ -17,7 +17,7 @@ function App() {
         <Route path={['/admin', '/admin/vehiculos', '/admin/clientes']}>
           <PrivateLayout>
             <switch>
-              <Route path='/admin/Vehiculos'>
+              <Route path='/admin/vehiculos'>
                 <Vehiculos />
               </Route>
               <Route path='/admin/clientes'>
